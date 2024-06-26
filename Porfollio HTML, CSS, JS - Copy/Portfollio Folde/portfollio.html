@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spencer's Portfollio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8b4f4bb65f.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -37,11 +38,11 @@
                     <h1 class="sub-title">About Me</h1>
                     <p>Energetic technical professional ready to undertake challenging technical workplace triage duties in demanding environments. Skilled at building rapport with diverse individuals while handling complex technical issues, while performing the main tasks at hand (problem-solving). Cognizant of when to go hands-on with issues and when to delegate support calls to appropriate personnel. Eager to apply personal technological expertise to support tasks and keen technical judgment to fast-paced personnel delegation. Seeking to effectively benefit an IT department with complex technical knowledge. Resolves problems quickly, delivering high levels of customer satisfaction. Excellent knowledge of assisting members of diverse team networks. Troubleshooter with strong attention to detail and methodical approach. Boosts system performance by thoroughly evaluating and correcting different hardware and software issues.</p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('Education')">Education</p>
                     </div>
-                    <div class="tab-contents active-tab" id="Skills">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Front End Engineer</span><br>Customizing and Building Effective and Design Driven Websites</li>
                             <li><span>Technical Troubleshooter</span><br>Problem solving analysis to deliver results</li>
@@ -68,6 +69,35 @@
             </div>
         </div>
     </div>
+
+<!-- Services -->
+ <div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-regular fa-file-code"></i>
+                <h2>Freelance Web Design</h2>
+                <p>Get your website created with real design and code. Templates and custom layouts are can be incorporated to fit your unique style. Customize websites the way you want even withought coding knowledge. Please fill out the survey below for more information.</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>Get your website created with real design and code. Templates and custom layouts are can be incorporated to fit your unique style. Customize websites the way you want even withought coding knowledge. Please fill out the survey below for more information.</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>Technical Consultant</h2>
+                <p>Get your website created with real design and code. Templates and custom layouts are can be incorporated to fit your unique style. Customize websites the way you want even withought coding knowledge. Please fill out the survey below for more information.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+ </div>
 
     <script>
 var tablinks = document.getElementsByClassName('tab-links');
