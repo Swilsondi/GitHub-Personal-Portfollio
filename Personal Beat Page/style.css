@@ -1,0 +1,48 @@
+.menu{
+    border: 5px solid black;
+    padding: 20px;
+    display: inline-block;
+    height: 450px;
+}
+
+.menu-left{
+    
+}
+
+.menu-right{
+    margin-left: 1350px;
+    display: inline-block;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+.home-screen{
+    border: 5px solid black;
+    height: 100%;
+    padding: 25px;
+    width: 200px;
+    height: 600px;
+    margin-top: 10px;
+}
+.beats{
+    border: 5px solid black;
+    margin-left: 270px;
+    width: 1138px;
+    height: 100%;
+    height: 611px;
+    padding: 20px;
+    margin-top: -660px;
+    text-align: center;
+}
+.packs{
+    border: 5px solid black;
+    height: 200px;
+    padding: 50px;
+    text-align: center;
+}
+footer{
+    text-align: center;
+}
