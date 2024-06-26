@@ -16,10 +16,76 @@
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfollio</a></li>
-                    <li><a href="#">Contat</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
+            <div class="header-text">
+                <p>Front End Software Developer</p>
+                <h1>Hi, I'm <span>Spencer!</span> Feel free to<br> explore and reach out.</h1>
+            </div>
         </div>
     </div>
+
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Energetic technical professional ready to undertake challenging technical workplace triage duties in demanding environments. Skilled at building rapport with diverse individuals while handling complex technical issues, while performing the main tasks at hand (problem-solving). Cognizant of when to go hands-on with issues and when to delegate support calls to appropriate personnel. Eager to apply personal technological expertise to support tasks and keen technical judgment to fast-paced personnel delegation. Seeking to effectively benefit an IT department with complex technical knowledge. Resolves problems quickly, delivering high levels of customer satisfaction. Excellent knowledge of assisting members of diverse team networks. Troubleshooter with strong attention to detail and methodical approach. Boosts system performance by thoroughly evaluating and correcting different hardware and software issues.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Front End Engineer</span><br>Customizing and Building Effective and Design Driven Websites</li>
+                            <li><span>Technical Troubleshooter</span><br>Problem solving analysis to deliver results</li>
+                            <li><span>Software Programmer</span><br>Puting ideas into action. Making the dream a reality</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>05/2024 - Current</span><br>Annistar Technologies Data Center Engineer</li>
+                            <li><span>05/2023 - 05/2024</span><br>Sherwin Williams Technology Sales Branch Coordinator</li>
+                            <li><span>05/2021 - 09/2021</span><br>Volvo Penta Technical Sales</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>Old Dominion University 2017 - 2023</span><br>Information Systems Major<br>Business Management Minor</li>
+                            <li><span>Code Camp</span><br>HTML, CSS, JavaScript, Python</li>
+                            <li><span>Udemy Course Angela Yu</span><br>Website Developement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+var tablinks = document.getElementsByClassName('tab-links');
+
+var tabcontents = document.getElementsByClassName('tab-contents');
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    } 
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    } 
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+} 
+    </script>
 </body>
+
 </html>
+
