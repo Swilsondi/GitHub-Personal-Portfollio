@@ -12,13 +12,15 @@
         <div class="container">
             <nav>
                 <img src="./images/logo.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfollio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfollio">Portfollio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Front End Software Developer</p>
@@ -32,7 +34,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="./images/user.png">
+                    <img src="./images/linkedin.jpg">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -129,8 +131,41 @@
                     </div>
                 </div>
             </div>
+            <a href="#" class="btn">See More</a>
         </div>
   </div>
+<!-- Contact -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>Swilsondi@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>571-327-7027</p>
+                <div class="social-icons">
+                    <a href="https://github.com/Swilsondi"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/swilsondi/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/spencerwilsontech/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="./Spencer Wilson Developer Resume 2024.docx" download class="btn btn2">Download CV</a>
+            </div>
+
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message to Me"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p><i class="fa-solid fa-copyright"></i>Copyright @ Spencer WIlson</p>
+    </div>
+</div>
+
 
     <script>
 var tablinks = document.getElementsByClassName('tab-links');
@@ -147,7 +182,42 @@ function opentab(tabname){
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
 } 
+
     </script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw2Mw6KATQep_xEOjMc3CDMXw79klh3LCjbcbAKRaUthm4cKrcZ69bZzpFNNJD19bGG/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Sucessfully Submited"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
 </body>
 
 </html>
