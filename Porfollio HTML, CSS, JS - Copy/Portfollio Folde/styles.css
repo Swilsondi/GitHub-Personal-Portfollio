@@ -55,6 +55,11 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
+nav .name{
+    font-size: 50px;
+    font-weight: 800;
+    color: #ff004f;
+}
 .header-text{
     margin-top: 20%;
     font-size: 30px;
