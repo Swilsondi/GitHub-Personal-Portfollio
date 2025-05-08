@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spencer's Portfollio</title>
+    <meta name="description" content="Portfolio of Spencer Wilson, a Full Stack Software Developer showcasing skills, experience, and projects.">
+    <title>Spencer Wilson's Portfolio - Full Stack Developer</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/8b4f4bb65f.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Header Section -->
     <div id="header">
-       
         <div class="container">
             <nav>
                 <p class="name">Spencer Wilson</p>
@@ -17,16 +18,16 @@
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#portfollio">Portfollio</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                    <i class="fa-solid fa-circle-xmark" aria-label="Close Menu" onclick="closeMenu()"></i>
                 </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                <i class="fa-solid fa-bars" aria-label="Open Menu" onclick="openMenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Full Stack Software Developer</p>
-                <h1>Hi, I'm <span>Spencer!</span> Your free to<br> explore and reach out.</h1>
-        </div>
+                <h1>Hi, I'm <span>Spencer!</span> You're free to<br> explore and reach out.</h1>
+            </div>
         </div>
     </div>
 
@@ -35,37 +36,35 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="./images/linkedin.jpg">
+                    <img src="./images/linkedin.jpg" alt="LinkedIn Profile Picture">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Energetic technical professional ready to undertake challenging technical workplace triage duties in demanding environments. Skilled at building rapport with diverse individuals while handling complex technical issues, while performing the main tasks at hand (problem-solving). Cognizant of when to go hands-on with issues and when to delegate support calls to appropriate personnel. Eager to apply personal technological expertise to support tasks and keen technical judgment to fast-paced personnel delegation. Seeking to effectively benefit an IT department with complex technical knowledge. Resolves problems quickly, delivering high levels of customer satisfaction. Excellent knowledge of assisting members of diverse team networks. Troubleshooter with strong attention to detail and methodical approach. Boosts system performance by thoroughly evaluating and correcting different hardware and software issues.</p>
+                    <p>Energetic technical professional ready to undertake challenging technical workplace triage duties in demanding environments. Skilled at building rapport with diverse individuals and providing technical solutions.</p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        <p class="tab-links active-link" onclick="openTab('skills', event)">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience', event)">Experience</p>
+                        <p class="tab-links" onclick="openTab('education', event)">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Full Stack Engineer</span><br>Customizing and Building Effective and secure Design Driven Websites</li>
-                            <li><span>Technical Troubleshooter</span><br>Problem solving analysis to deliver results</li>
-                            <li><span>Software Programmer</span><br>Puting ideas into action. Making the dream a reality</li>
+                            <li><span>Full Stack Engineer:</span> Customizing and building effective, secure, design-driven websites.</li>
+                            <li><span>Technical Troubleshooter:</span> Problem-solving analysis to deliver results.</li>
+                            <li><span>Software Programmer:</span> Putting ideas into action and making the dream a reality.</li>
                         </ul>
                     </div>
-
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>05/2024 - Current</span><br>Annistar Technologies Data Center Engineer</li>
-                            <li><span>05/2023 - 05/2024</span><br>Sherwin Williams Technology Sales Branch Coordinator</li>
-                            <li><span>05/2021 - 09/2021</span><br>Volvo Penta Technical Sales</li>
+                            <li><span>05/2024 - Current:</span> Annistar Technologies Data Center Engineer.</li>
+                            <li><span>05/2023 - 05/2024:</span> Sherwin Williams Technology Sales Branch Coordinator.</li>
+                            <li><span>05/2021 - 09/2021:</span> Volvo Penta Technical Sales.</li>
                         </ul>
                     </div>
-
-                    <div class="tab-contents" id="Education">
+                    <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>Old Dominion University 2017 - 2023</span><br>Information Systems Major<br>Business Management Minor</li>
-                            <li><span>Code Camp</span><br>HTML, CSS, JavaScript, Python</li>
-                            <li><span>Udemy Course Angela Yu</span><br>Website Developement</li>
+                            <li><span>Old Dominion University (2017 - 2023):</span> Information Systems Major, Business Management Minor.</li>
+                            <li><span>Code Camp:</span> HTML, CSS, JavaScript, Python.</li>
+                            <li><span>Udemy Course Angela Yu:</span> Website Development.</li>
                         </ul>
                     </div>
                 </div>
@@ -73,153 +72,18 @@
         </div>
     </div>
 
-<!-- Services -->
- <div id="services">
-    <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-regular fa-file-code"></i>
-                <h2>Freelance Web Design</h2>
-                <p>Get your website created with real design and code. Templates and custom layouts can be incorporated to fit your unique style. Customize websites the way you want even withought coding knowledge. Please fill out the survey below for more information.</p>
-                <a href="#">Learn More</a>
-            </div>
-
-            <div>
-                <i class="fa-brands fa-app-store"></i>
-                <h2>App Design</h2>
-                <p>Get your website created with real design and code. Templates and custom layouts can be incorporated to fit your unique style. Customize websites the way you want even withought coding knowledge. Please fill out the survey below for more information.</p>
-                <a href="#">Learn More</a>
-            </div>
-
-            <div>
-                <i class="fa-solid fa-crop"></i>
-                <h2>Technical Consultant</h2>
-                <p>Get your website created with real design and code. Templates and custom layouts can be incorporated to fit your unique style. Customize websites the way you want even withought coding knowledge. Please fill out the survey below for more information.</p>
-                <a href="#">Learn More</a>
-            </div>
-        </div>
-    </div>
- </div>
-
- <!-- Portfollio Section -->
-  <div id="portfollio">
+    <!-- Services Section -->
+    <div id="services">
         <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="./images/work-1.png">
-                    <div class="layer">
-                        <h3>Facebook App</h3>
-                        <p>This is just to display how confident I am making pages come to life that have already been designed from the gound up. Come to me with your designs and you wont be dissapointed.</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
-                    </div>
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-regular fa-file-code"></i>
+                    <h2>Freelance Web Design</h2>
+                    <p>Create websites with real design and code. Templates and custom layouts can be incorporated to fit your unique style.</p>
+                    <a href="https://example.com" target="_blank">Learn More</a>
                 </div>
-                <div class="work">
-                    <img src="./images/work-2.png">
-                    <div class="layer">
-                    <h3>Netflix App</h3>
-                        <p>This is just to display how confident I am making pages come to life that have already been designed from the gound up. Come to me with your designs and you wont be dissapointed.</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="./images/work-3.png">
-                    <div class="layer">
-                    <h3>Beats</h3>
-                        <p>This is just to display how confident I am making pages come to life that have already been designed from the gound up. Come to me with your designs and you wont be dissapointed.</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="btn">See More</a>
-        </div>
-  </div>
-<!-- Contact -->
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-envelope"></i>Swilsondi@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i>571-327-7027</p>
-                <div class="social-icons">
-                    <a href="https://github.com/Swilsondi"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.instagram.com/swilsondi/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/spencerwilsontech/"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-                <a href="./Spencer Wilson Developer Resume 2024.docx" download class="btn btn2">Download CV</a>
-            </div>
-
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message to Me"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
-            </div>
-        </div>
-    </div>
-    <div class="copyright">
-        <p><i class="fa-solid fa-copyright"></i>Copyright @ Spencer WIlson</p>
-    </div>
-</div>
-
-
-    <script>
-var tablinks = document.getElementsByClassName('tab-links');
-
-var tabcontents = document.getElementsByClassName('tab-contents');
-
-function opentab(tabname){
-    for(tablink of tablinks){
-        tablink.classList.remove("active-link");
-    } 
-    for(tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tab");
-    } 
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
-} 
-
-    </script>
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-
-
-</script>
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbw2Mw6KATQep_xEOjMc3CDMXw79klh3LCjbcbAKRaUthm4cKrcZ69bZzpFNNJD19bGG/exec'
-    const form = document.forms['submit-to-google-sheet']
-
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Sucessfully Submited"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-
-</body>
-
-</html>
-
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design
+
